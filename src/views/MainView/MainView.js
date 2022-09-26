@@ -1,6 +1,7 @@
 ﻿// @vue/component
+
 export default {
-    name: 'main-navbar',
+    name: 'main-view',
 
     components: {},
 

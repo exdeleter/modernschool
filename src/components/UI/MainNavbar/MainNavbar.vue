@@ -1,4 +1,7 @@
-﻿<template>
+﻿<script src="./MainNavbar.js" lang="js"></script>
+<style src="./MainNavbar.css" scoped></style>
+
+<template>
     <div class="main-navbar">
       <h1>Современная школа</h1>
       <div class="main-navbar__items">
@@ -8,5 +11,3 @@
       </div>
 </template>
 
-<script src="./MainNavbar.js" lang="js"></script>
-<style src="./MainNavbar.css" scoped></style>
