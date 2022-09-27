@@ -7,7 +7,7 @@
       <div class="main-navbar__items">
         <RouterLink to="/">Главная</RouterLink>
         <RouterLink to="/about">Организации</RouterLink>
-      </div>
-      </div>
+      </div>  
+    </div>
 </template>
 
