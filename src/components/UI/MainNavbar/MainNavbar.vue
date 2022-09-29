@@ -3,11 +3,17 @@
 
 <template>
     <div class="main-navbar">
-      <h1>Современная школа</h1>
       <div class="main-navbar__items">
-        <RouterLink to="/">Главная</RouterLink>
-        <RouterLink to="/about">Организации</RouterLink>
-      </div>  
+        <h1 class="heading_lbl">Современная школа</h1>
+        <div>
+          <RouterLink to="/">Главная</RouterLink>
+        </div>
+        <div class="about">
+          <RouterLink to="/about">Организации</RouterLink>
+          </div>
+      </div>
     </div>
+
 </template>
+
 

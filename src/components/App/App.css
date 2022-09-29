@@ -1,8 +1,7 @@
-﻿* {
-    margin: 0;
-    padding: 0;
-    display:grid;   
-}
-
-.app {
+﻿MainPage.main-page{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
