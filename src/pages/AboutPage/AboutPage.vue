@@ -1,9 +1,12 @@
-﻿<script src="./AboutPage.js"></script>
+﻿<script src="./AboutPage.js" ></script>
 <style src="./AboutPage.css" scoped></style>
 
 <template>
-    <div class="about-page">
-      <h1>About</h1>
-      <p>hfjdhfhskdfkdshfjh hfsdjkhfkjdsh sjdhfkshdfjhdsfh sdjfhkdsjhfbvjhfiu fdshkj</p>
+    <div>
+      <h1>
+       Современная школа - веб - приложение, которое способно заменить ныне существующий один сайтик:) 
+      </h1>
     </div>
 </template>
+
+

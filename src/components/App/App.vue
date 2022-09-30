@@ -3,8 +3,8 @@
 
 <!-- некоторая разметка -->
 <template>
-  <main-navbar>
-  </main-navbar>
+  <my-navbar>
+  </my-navbar>
   <div class="app">
     <router-view>
     </router-view>

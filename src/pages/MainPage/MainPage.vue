@@ -1,8 +1,11 @@
-﻿<script src="./MainPage.js"></script>
-<style src="./MainPage.css" scoped></style>
+﻿<style src="./MainPage.css" scoped></style>
+<script src="./MainPage.js"></script>
 
 <template>
-    <div class="main-page">
-      <h1>Welcome to the modern school</h1>
-    </div>
+  <div>
+    <h1>
+      Современная школа
+    </h1>
+  </div>
 </template>
+

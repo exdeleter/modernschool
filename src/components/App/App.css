@@ -1,7 +1,9 @@
-﻿MainPage.main-page{
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    padding-top: 5rem;
+    padding-left: 2rem;
 }

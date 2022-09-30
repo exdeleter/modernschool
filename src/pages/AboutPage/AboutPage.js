@@ -1,9 +1,8 @@
-﻿
+﻿// @vue/component
 export default {
-    name: 'about-page',
+    name: 'AboutPage',
 
-    components: {
-    },
+    components: {},
 
     mixins: [],
 

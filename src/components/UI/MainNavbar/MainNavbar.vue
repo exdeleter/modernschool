@@ -1,19 +1,30 @@
-﻿<script src="./MainNavbar.js" lang="js"></script>
+﻿<script src="./MainNavbar.js" ></script>
 <style src="./MainNavbar.css" scoped></style>
 
 <template>
     <div class="main-navbar">
-      <div class="main-navbar__items">
-        <h1 class="heading_lbl">Современная школа</h1>
-        <div>
-          <RouterLink to="/">Главная</RouterLink>
-        </div>
-        <div class="about">
-          <RouterLink to="/about">Организации</RouterLink>
-          </div>
+      <div @click="$router.push('/')">
+        Современная школа
       </div>
+        <ul class="complex_list">
+          <li>
+            <my-button @click="$router.push('/organizations')"
+            >Организации
+            </my-button>
+          </li>
+          <li>
+            <my-button @click="$router.push('/about')"
+            >Ученику
+            </my-button>
+          </li>
+          <li>
+            <my-button style="width: 100%"
+                @click="$router.push('/about')"
+            >О сайте
+            </my-button>
+          </li>
+          
+        </ul>
     </div>
-
 </template>
-
 
