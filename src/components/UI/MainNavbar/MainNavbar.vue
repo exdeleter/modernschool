@@ -8,22 +8,26 @@
       </div>
         <ul class="complex_list">
           <li>
-            <my-button @click="$router.push('/organizations')"
+            <custom-button @click="$router.push('/organizations')"
             >Организации
-            </my-button>
+            </custom-button>
           </li>
           <li>
-            <my-button @click="$router.push('/about')"
+            <custom-button @click="$router.push('/about')"
             >Ученику
-            </my-button>
+            </custom-button>
           </li>
           <li>
-            <my-button style="width: 100%"
+            <custom-button @click="$router.push('/teacher')"
+            >Учителю
+            </custom-button>
+          </li>
+          <li>
+            <custom-button style="width: 100%"
                 @click="$router.push('/about')"
             >О сайте
-            </my-button>
+            </custom-button>
           </li>
-          
         </ul>
     </div>
 </template>

@@ -1,12 +1,13 @@
-﻿import MyButton from "@/components/UI/MyButton/MyButton.vue";
-import MyInput from "@/components/UI/MyInput/MyInput.vue";
+﻿import CustomButton from "@/components/UI/CustomButton/CustomButton";
+import CustomInput from "@/components/UI/CustomInput/CustomInput.vue";
 import MyDialogWindow from "@/components/UI/MyDialogWindow/MyDialogWindow.vue";
 import MySelect from "@/components/UI/MySelect/MySelect.vue";
 import MyNavbar from "@/components/UI/MainNavbar/MainNavbar.vue";
 
+
 export default [
-    MyButton,
-    MyInput,
+    CustomButton,
+    CustomInput,
     MyDialogWindow,
     MySelect,
     MyNavbar
