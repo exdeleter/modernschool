@@ -1,5 +1,5 @@
-﻿<script src="./MyInput.js"></script>
-<style src="./MyInput.css" scoped></style>
+﻿<script src="./CustomInput.js"></script>
+<style src="./CustomInput.css" scoped></style>
 
 <template>
   <input

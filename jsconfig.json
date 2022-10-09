@@ -1,8 +1,9 @@
 {
+  "include": ["./src/**/*"],
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
-    "baseUrl": "./",
+    "baseUrl": "src",
     "moduleResolution": "node",
     "paths": {
       "@/*": [
@@ -16,5 +17,6 @@
       "scripthost"
     ],
     "jsx": "preserve"
-  }
+  },
+  "exclude": ["node_modules"]
 }

@@ -1,6 +1,6 @@
 ﻿// @vue/component
 export default {
-    name: 'AboutPage',
+    name: 'about-page',
 
     components: {},
 
