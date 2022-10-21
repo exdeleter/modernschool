@@ -9,6 +9,7 @@ module.exports = defineConfig({
       alias: {
         "@": path.join(__dirname, vueSrc),
         "@pages": path.join(__dirname, vueSrc, "./pages"),
+        "@components": path.join(__dirname, vueSrc, "./components/UI"),
       }
     }
   }

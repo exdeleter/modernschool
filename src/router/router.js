@@ -4,6 +4,7 @@ import {
     AboutPage,
     OrganizationsPage,
     TeacherPage,
+    ClassesPage
 } from "@pages";
 
 
@@ -23,6 +24,10 @@ const routes = [
     {
         path: '/about',
         component: AboutPage
+    },
+    {
+        path: '/classes-page',
+        component: ClassesPage
     },
 ]
 

@@ -14,7 +14,7 @@
           <custom-input 
               v-model="pass">
           </custom-input>
-          <custom-button @click="() => log === 'test' && pass === 'test' ? $router.push('/about') : isVisible = true">
+          <custom-button @click="() => log === 'test' && pass === 'test' ? $router.push('/classes-page') : isVisible = true">
             Войти
           </custom-button>
         </div>

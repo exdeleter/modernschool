@@ -1,0 +1,7 @@
+﻿.custom-table {
+
+}
+
+.custom-table__head__col {
+    @apply py-3 px-6 border-r-2 w-9;
+}
