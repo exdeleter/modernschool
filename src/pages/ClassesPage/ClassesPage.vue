@@ -3,7 +3,10 @@
 
 <template>
     <div class="classes-page">
-      <custom-table>
+      <custom-table
+        :data="data"
+        :columns="columns"
+      >
       </custom-table>
      </div>
 </template>
