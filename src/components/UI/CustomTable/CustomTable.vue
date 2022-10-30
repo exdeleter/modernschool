@@ -23,8 +23,18 @@
             <td 
               class="custom-table__head__cell"
               v-for="prop in columns"
+            ><slot
+               :name="prop.name"
+               :modelValue="item[prop.name]"
+               v-bind="{
+                 item,
+                 value:item[prop.name],
+                 updateItem: updateItem,
+                 modelValue:item[prop.name]
+               }"
             >
               {{item[prop.name]}}
+            </slot>
             </td>
           </tr>
           </tbody>

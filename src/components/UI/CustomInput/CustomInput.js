@@ -3,9 +3,13 @@
     props:{
         modelValue: [String, Number]
     },
-    methods : {
-        updateInput(event) {
-            this.$emit('update:modelValue', event.target.value)
+    setup(props, {emit}) {
+        function updateInput(event) {
+            emit('update:modelValue', event.target.value)
+        }
+
+        return {
+            updateInput,
         }
     }
 }

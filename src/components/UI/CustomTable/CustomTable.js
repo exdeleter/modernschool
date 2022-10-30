@@ -1,5 +1,5 @@
 ﻿// @vue/component
-import {ref, toRefs } from 'vue'
+import { toRefs } from 'vue'
 export default {
     name: 'custom-table',
 
@@ -15,11 +15,16 @@ export default {
         }
     },
     
-    setup(props) {
+    setup(props, { emit }) {
         const { data, columns } = toRefs(props);
         //TODO подумать над тем, как передавать изменение значение в ячейке таблицы
+        function updateItem() {
+            debugger;
+            emit('update:modelValue', event.target.value)
+        }
         
         return {
+            updateItem,
             columns,
             data,
         }

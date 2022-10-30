@@ -1,11 +1,15 @@
 ﻿.main-navbar {
-   @apply bg-gray-900 border-gray-200 px-2 sm:px-4 py-2.5 rounded 
+   @apply bg-gray-500 border-gray-200 px-2 sm:px-4 py-2.5 rounded 
 }
 
 .main-navbar__container {
    @apply container flex flex-wrap justify-between items-center mx-auto;
 }
 
+.main-navbar__btn {
+    @apply flex flex-col p-4 mt-4 bg-gray-500 rounded-lg border bg-gray-500 md:flex-row md:space-x-8
+    md:mt-0 md:text-sm md:font-medium  md:bg-gray-300 bg-gray-500
+}
 .main-navbar__btns_item  {
     width: 100%;
     margin-top: 20px;

@@ -21,42 +21,42 @@ export default {
 
         const columns = [
             {
-                name: 'productName', 
-                label: "product name",
+                name: 'class', 
+                label: "Класс (буква)",
             },
             {
-                name: 'color',
-                label: 'color',
+                name: 'mainTeacher',
+                label: 'Классный руководитель',
             },
             {
-                name: 'category',
-                label: 'category',
+                name: 'count',
+                label: 'Количество учеников',
             },
             {
-                name: 'price',
-                label: 'PRICE',
+                name: 'mainStudent',
+                label: 'Староста',
             },
         ]
 
 
         const data = ref([
             {
-                productName: 'Apple MacBook Pro 17"', 
-                color: 'Silver',
-                category: 'Laptop',
-                price: '$2999'
+                class: "11 A",
+                mainTeacher: "Тестовая С. С.",
+                count: "29",
+                mainStudent: "Тестовый К. С.",
             },
             {
-                productName: 'Apple MacBook Pro 17"', 
-                color: 'Silver',
-                category: 'Laptop',
-                price: '$2999'
+                class: "11 Б",
+                mainTeacher: "Боевая Р. У.",
+                count: "30",
+                mainStudent: "Боев Ю. Р.",
             },
             {
-                productName: 'Apple MacBook Pro 17"', 
-                color: 'Silver',
-                category: 'Laptop',
-                price: '$2999'
+                class: "11 В",
+                mainTeacher: "Продов Х. С.",
+                count: "27",
+                mainStudent: "Продова М. У.",
             },
         ])
 
