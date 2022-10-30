@@ -1,0 +1,12 @@
+﻿.custom-table {
+
+}
+
+.custom-table__head__col {
+    @apply py-3 px-6 border-r-2 w-9;
+}
+
+
+.custom-table__head__cell {
+    @apply py-4 px-6 border-2 text-black
+}
