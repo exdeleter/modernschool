@@ -17,7 +17,7 @@ export default {
     
     setup(props) {
         const { data, columns } = toRefs(props);
-        
+        //TODO подумать над тем, как передавать изменение значение в ячейке таблицы
         
         return {
             columns,

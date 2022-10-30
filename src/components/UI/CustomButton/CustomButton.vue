@@ -3,9 +3,8 @@
 
 <template>
   <button 
-      class="btn"
+      class="custom-button"
   >
-    <slot>
-    </slot>
+    <slot></slot>
   </button>
 </template>

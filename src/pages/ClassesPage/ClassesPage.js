@@ -1,20 +1,20 @@
 ﻿// @vue/component
 import { ref } from 'vue'
-import CustomTable from "@/components/UI/CustomTable/CustomTable.vue"
+import { 
+    MyDialogWindow, 
+    CustomTable,
+    CustomButton,
+    CustomTableCellEditor,
+} from "@/components/UI";
 
 export default {
     name: 'classes-page',
 
     components: {
-        CustomTable
-    },
-
-    mixins: [],
-
-    props: {},
-
-    data () {
-        return {}
+        CustomTable,
+        MyDialogWindow,
+        CustomButton,
+        CustomTableCellEditor
     },
 
     setup(props, {emit}) {
@@ -60,16 +60,13 @@ export default {
             },
         ])
 
+        //TODO delete later
+        const testValue = ref(null);
+
         return {
             data, 
             columns,
+            testValue,
         }
     },
-    computed: {},
-
-    watch: {},
-
-    created () {},
-
-    methods: {}
 }
