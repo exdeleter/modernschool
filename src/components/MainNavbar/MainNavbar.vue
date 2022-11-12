@@ -22,6 +22,9 @@
             <li>
               <a href="#" class="main-navbar__btns" @click="$router.push('/teacher')">Учителю</a>
             </li>
+            <li>
+              <a href="#" class="main-navbar__btns" @click="$router.push('/login-page')">Войти</a>
+            </li>
           </ul>
         </div>
       </div>

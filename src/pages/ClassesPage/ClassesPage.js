@@ -5,7 +5,7 @@ import {
     CustomTable,
     CustomButton,
     CustomTableCellEditor,
-} from "@/components/UI";
+} from "@components";
 
 export default {
     name: 'classes-page',
