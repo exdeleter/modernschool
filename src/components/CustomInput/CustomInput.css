@@ -1,0 +1,9 @@
+﻿.custom-input {
+    @apply p-2
+}
+
+.input {
+    @apply rounded-lg border-2 border-teal-500;
+    width: 100%;
+    padding: 10px 15px; /*слева и справа*/
+}

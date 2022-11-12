@@ -1,4 +1,4 @@
-﻿import CustomButton from "@/components/UI/CustomButton/CustomButton.vue";
+﻿import {CustomButton} from "@components";
 
 export default {
     name: 'main-navbar',
