@@ -4,7 +4,7 @@
 <template>
     <div class="classes-page">
       <custom-table
-        :data="data"
+        :data="store.data"
         :columns="columns"
       >
         <template #count="{ item, value, updateItem }">
