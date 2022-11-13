@@ -6,6 +6,7 @@ import {
     CustomButton,
     CustomTableCellEditor,
 } from "@components";
+import { useUserStore } from "@store";
 
 export default {
     name: 'classes-page',
@@ -21,23 +22,24 @@ export default {
 
         const columns = [
             {
-                name: 'class', 
+                name: 'id', 
                 label: "Класс (буква)",
             },
             {
-                name: 'mainTeacher',
+                name: 'name',
                 label: 'Классный руководитель',
             },
             {
-                name: 'count',
+                name: 'username',
                 label: 'Количество учеников',
             },
             {
-                name: 'mainStudent',
+                name: 'email',
                 label: 'Староста',
             },
         ]
 
+        const store = useUserStore();
 
         const data = ref([
             {
@@ -67,6 +69,7 @@ export default {
             data, 
             columns,
             testValue,
+            store,
         }
     },
 }
