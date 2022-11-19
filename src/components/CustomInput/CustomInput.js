@@ -4,7 +4,8 @@ export default {
     name: "custom-input",
     props:{
         modelValue: [String, Number],
-        placeholder: [String, Number]
+        placeholder: [String, Number],
+        type: [String, Number],
     },
     setup(props, {emit}) {
         const { placeholder } = toRefs(props);

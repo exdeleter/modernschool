@@ -12,12 +12,17 @@
       </custom-input>
       <custom-input
           placeholder="Пароль"
-          v-model="log"
+          v-model="pass"
+          type="password"
       >
       </custom-input>
-      <custom-button class="login-page__button">
-        Войти
-      </custom-button>
+      <div class="login-page__buttons">
+        <custom-button class="login-page__button" @click="Login">
+          Войти
+        </custom-button>
+        <p>Регистрация</p>
+      </div>
+      <p>{{store.data}}</p>
     </div>
 </template>
 

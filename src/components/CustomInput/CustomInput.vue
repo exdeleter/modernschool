@@ -6,7 +6,7 @@
     <p>{{ placeholder }}</p>
     <input
         class="input"
-        type="text"
+        :type=type
         :value="modelValue"
         @input="updateInput"
     >
