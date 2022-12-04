@@ -7,28 +7,28 @@ export const useLoginStore = defineStore("user",() => {
     const params = ref({});
     const token = ref(null);
 
-    onMounted(async () => {
+    async function Login() {
         try {
-            const response = await axios.post('http://localhost:5217/api/Auth/register',
-                {
-                    "userName": "string",
-                    "password": "string"
-                })
+            const response = await axios.post(
+                'http://localhost:5217/api/Auth/login',
+                params.value
+            )
+            //TODO подумать над тем, как токен сохранить глобально
             data.value = response.data;
+            localStorage.setItem('token', response.data)
+            //TODO temp solution, may be need to do with other way 
         }
         catch (error) {
             alert(error)
             console.log(error)
         }
-    })
+    }
 
-    async function Login() {
+    async function Register() {
         try {
-            const response = await axios.post('http://localhost:5217/api/Auth/login',
-                {
-                    "userName": "string",
-                    "password": "string"
-                })
+            const response = await axios.post('http://localhost:5217/api/Auth/register',
+                params.value
+            )
             //TODO подумать над тем, как токен сохранить глобально
             data.value = response.data;
         }
@@ -42,5 +42,6 @@ export const useLoginStore = defineStore("user",() => {
         data,
         params,
         Login,
+        Register,
     }
 });
