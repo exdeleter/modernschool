@@ -7,7 +7,7 @@
         <table class="w-full text-sm text-left text-gray-400">
           <thead class="text-xs text-white uppercase bg-gray-500">
           <tr>
-            <th v-for="col in columns" 
+            <th v-for="col in columns"
                 scope="col" 
                 class="custom-table__head__col" 
                 :class="col.class">
@@ -19,6 +19,7 @@
           <tr
            class="bg-blue-100" 
            v-for="item in data"
+           :key="item.id"
           >
             <td 
               class="custom-table__head__cell"

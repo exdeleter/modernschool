@@ -4,7 +4,8 @@ import {
     OrganizationsPage,
     TeacherPage,
     ClassesPage,
-    LoginPage
+    LoginPage,
+    SubjectsPage
 } from "@pages";
 
 
@@ -32,6 +33,10 @@ const routes = [
     {
         path: '/login-page',
         component: LoginPage
+    },
+    {
+        path: '/subjects-page',
+        component: SubjectsPage
     },
 ]
 
