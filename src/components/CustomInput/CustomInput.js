@@ -8,7 +8,7 @@ export default {
         type: [String, Number],
     },
     setup(props, {emit}) {
-        const { placeholder } = toRefs(props);
+        const { placeholder, modelValue } = toRefs(props);
         
         function updateInput(event) {
             emit('update:modelValue', event.target.value)
@@ -17,6 +17,7 @@ export default {
         return {
             updateInput,
             placeholder,
+            modelValue,
         }
     }
 }
