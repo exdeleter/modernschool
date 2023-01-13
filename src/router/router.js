@@ -5,7 +5,8 @@ import {
     TeacherPage,
     ClassesPage,
     LoginPage,
-    SubjectsPage
+    SubjectsPage,
+    TeacherFormPage, NotFoundPage,
 } from "@pages";
 
 
@@ -37,6 +38,16 @@ const routes = [
     {
         path: '/subjects-page',
         component: SubjectsPage
+    },
+    {
+        path: '/teacher-form-page/:id',
+        component: TeacherFormPage,
+        props: true,
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        component: NotFoundPage,
+
     },
 ]
 

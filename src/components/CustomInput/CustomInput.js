@@ -3,12 +3,19 @@
 export default {
     name: "custom-input",
     props:{
-        modelValue: [String, Number],
+        modelValue: {
+            default: null,
+            type: String
+        },
         placeholder: [String, Number],
         type: [String, Number],
+        label: {
+            default: null,
+            type: String,
+        }
     },
     setup(props, {emit}) {
-        const { placeholder } = toRefs(props);
+        const { placeholder, modelValue, label } = toRefs(props);
         
         function updateInput(event) {
             emit('update:modelValue', event.target.value)
@@ -17,6 +24,8 @@ export default {
         return {
             updateInput,
             placeholder,
+            modelValue,
+            label,
         }
     }
 }

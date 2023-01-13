@@ -9,7 +9,7 @@ export const useLoginStore = defineStore("user",() => {
     async function Login() {
         try {
             const response = await axios.post(
-                'http://localhost:5217/api/Auth/login',
+                'http://localhost:5217/api/Auth/LoginAsAdmin',
                 params.value
             )
 

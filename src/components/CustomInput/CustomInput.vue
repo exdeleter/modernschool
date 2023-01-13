@@ -9,6 +9,7 @@
         :type=type
         :value="modelValue"
         @input="updateInput"
+        :placeholder="label"
     >
   </div>
 </template>
