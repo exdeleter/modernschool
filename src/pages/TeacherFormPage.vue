@@ -3,11 +3,11 @@
     <div class="teacher-form-page__toolbar">
     </div>
     <div class="teacher-form-page__content">
-      <custom-input placeholder="Имя" :modelValue="data?.name"></custom-input>
-      <custom-input placeholder="Фамилия" :modelValue="data?.surname"></custom-input>
-      <custom-input placeholder="Отчество" :modelValue="data?.patronymic"></custom-input>
+      <custom-input label="Введите" placeholder="Имя" v-model="data.name"></custom-input>
+      <custom-input placeholder="Фамилия" v-model="data.surname"></custom-input>
+      <custom-input placeholder="Отчество" v-model="data.patronymic"></custom-input>
     </div>
-    <custom-button @click="add"></custom-button>
+    <custom-button @click="add">Добавить</custom-button>
     <p> {{store}}</p>
   </div>
 </template>

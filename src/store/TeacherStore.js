@@ -2,8 +2,8 @@
 import axios from "axios"
 import { ref} from "vue";
 
-export const useTeacherStore = defineStore("user",() => {
-    const data = ref(null);
+export const useTeacherStore = defineStore("teacher",() => {
+    const data = ref({});
     const params = ref({});
 
     const instance = axios.create({
@@ -28,17 +28,29 @@ export const useTeacherStore = defineStore("user",() => {
 
     async function post() {
         try {
-            const response = await instance.post('/Teacher', {
-                "id": 0,
-                "name": "string",
-                "surname": "string",
-                "patronymic": "string",
-                "age": 0,
-                "subject": {
+            if (data.value?.id != 0) {
+                put();
+                return
+            }
+
+            const response = await instance.post(
+                '/Teacher',
+                {
+                    ...data.value,
                     "id": 0,
-                    "name": "string"
-                }
-            })
+                    "age": 0,
+                    "subject": {
+                        "id": 0,
+                        "name": "string",
+                        "term": {
+                            "id": 0,
+                            "name": "string",
+                            "startDate": "2023-01-13T12:06:27.955Z",
+                            "endDate": "2023-01-13T12:06:27.955Z",
+                            "currentYear": 0
+                        }
+                    }
+                })
 
             data.value = response.data;
         }
@@ -48,6 +60,32 @@ export const useTeacherStore = defineStore("user",() => {
         }
     }
 
+
+    async function put() {
+        try {
+            const response = await instance.put(
+                '/Teacher',
+                {
+                    ...data.value,
+                    "subject": {
+                        "id": 0,
+                        "name": "string",
+                        "term": {
+                            "id": 0,
+                            "name": "string",
+                            "startDate": "2023-01-13T12:06:27.955Z",
+                            "endDate": "2023-01-13T12:06:27.955Z",
+                            "currentYear": 0
+                        }
+                    }
+                })
+
+            data.value = response.data;
+        } catch (error) {
+            alert(error)
+            console.log(error)
+        }
+    }
     return {
         data,
         params,
