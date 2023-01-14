@@ -1,15 +1,22 @@
 ﻿.login-page {
-    @apply rounded-lg content-center w-96 p-3 border-teal-600 border-2 shadow-md ;
-    margin: auto;
+    overflow: hidden;
 }
 
-.login-page__head_org {
-    @apply text-lg font-bold p-3 justify-center;
-    display:flex
+.login-page__picture {
+    overflow: hidden;
+}
+.login-page__form {
+    @apply rounded-lg content-center w-96 p-3 border-teal-600 border-2 shadow-md ;
+    margin: auto;
+    position: absolute;
+    top: 15rem;
+    left: 60rem;
+    padding: 5px;
+    background-color: white;
 }
 
 .login-page__header {
-    @apply text-lg font-semibold p-3 justify-center;
+    @apply text-3xl font-bold p-3 justify-center;
     display:flex
 }
 

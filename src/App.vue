@@ -24,8 +24,6 @@ export default {
 <template>
   <main-navbar>
   </main-navbar>
-  <div class="app">
-    <router-view>
-    </router-view>
-  </div>
+  <router-view>
+  </router-view>
 </template>

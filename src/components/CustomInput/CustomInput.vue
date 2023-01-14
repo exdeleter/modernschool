@@ -3,13 +3,13 @@
 
 <template>
   <div class="custom-input">
-    <p>{{ placeholder }}</p>
+    <p>{{ label }}</p>
     <input
         class="input"
         :type=type
         :value="modelValue"
         @input="updateInput"
-        :placeholder="label"
+        :placeholder="placeholder"
     >
   </div>
 </template>
