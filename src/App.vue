@@ -1,6 +1,5 @@
 ﻿<script>
-import { MainNavbar
-} from "@components";
+import { MainNavbar } from "@components";
 
 export default {
   components : {
@@ -22,8 +21,8 @@ export default {
 
 <!-- некоторая разметка -->
 <template>
-  <main-navbar>
-  </main-navbar>
-  <router-view>
-  </router-view>
+    <main-navbar>
+    </main-navbar>
+    <router-view>
+    </router-view>
 </template>

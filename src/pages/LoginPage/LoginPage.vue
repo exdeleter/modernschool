@@ -3,9 +3,7 @@
 
 <template>
   <div class="login-page">
-    <div class="login-page__picture">
-      <img src="@/assets/var3.jpg"/>
-    </div>
+    <div class="login-page__empty"></div>
     <div class="login-page__form" v-if="!isRegisterVisible">
       <p class="login-page__header">Вход</p>
       <custom-input
@@ -30,8 +28,7 @@
       </div>
       <p>{{store.data}}</p>
     </div>
-    <div class="login-page" v-else>
-      <p class="login-page__head_org">Тестовая организация</p>
+    <div class="login-page-form" v-else>
       <p class="login-page__header">Регистрация</p>
       <custom-input
           placeholder="Логин"

@@ -1,17 +1,12 @@
 ﻿.login-page {
-    overflow: hidden;
+    background: url("var3.jpg");
+    height: 100%;
+    @apply grid grid-cols-[70%_auto]
 }
 
-.login-page__picture {
-    overflow: hidden;
-}
 .login-page__form {
-    @apply rounded-lg content-center w-96 p-3 border-teal-600 border-2 shadow-md ;
-    margin: auto;
-    position: absolute;
-    top: 15rem;
-    left: 60rem;
-    padding: 5px;
+    @apply rounded-lg content-center w-96 p-3 border-teal-600 border-2 shadow-md;
+    padding: 5vh;
     background-color: white;
 }
 
