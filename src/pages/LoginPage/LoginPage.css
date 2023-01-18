@@ -1,13 +1,21 @@
-﻿.login-page {
-    background: url("var3.jpg");
+﻿.container {
+    margin: auto;
     height: 100%;
-    @apply grid grid-cols-[70%_auto]
+}
+
+
+.login-page {
+    height: 100%;
+    background: url("var3.jpg");
 }
 
 .login-page__form {
-    @apply rounded-lg content-center w-96 p-3 border-teal-600 border-2 shadow-md;
-    padding: 5vh;
+    @apply rounded-lg content-center w-96 p-3 border-white border-2 shadow-2xl;
     background-color: white;
+    height: 50%;
+    float: right;
+    margin-right: 10%;
+    margin-top: 100px;
 }
 
 .login-page__header {
