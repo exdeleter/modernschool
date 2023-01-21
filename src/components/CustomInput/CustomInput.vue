@@ -8,7 +8,7 @@
         <p>{{ label }}</p>
       </div>
       <div class="custom-input__input">
-        <div class="custom-input__icon" v-if="icon">
+        <div class="custom-input__icon" v-if="true">
           <slot name="icon"></slot>
         </div>
         <input
