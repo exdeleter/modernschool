@@ -1,6 +1,7 @@
 ﻿.custom-button {
-    @apply p-2.5 rounded-lg bg-gray-300 border-2 border-teal-500 px-2 mt-2 ml-2 w-32 h-11 font-medium mx-2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @apply p-2 rounded-lg bg-gray-300 border-2 border-gray-400 p-2 m-2 font-medium mx-2;
+}
+
+.custom-button__button {
+    @apply w-full;
 }

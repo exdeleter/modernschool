@@ -12,10 +12,14 @@ export default {
         label: {
             default: null,
             type: String,
+        },
+        icon: {
+            default: null,
+            type: Boolean,
         }
     },
     setup(props, {emit}) {
-        const { placeholder, modelValue, label } = toRefs(props);
+        const { modelValue } = toRefs(props);
         
         function updateInput(event) {
             emit('update:modelValue', event.target.value)
@@ -23,9 +27,7 @@ export default {
 
         return {
             updateInput,
-            placeholder,
             modelValue,
-            label,
         }
     }
 }

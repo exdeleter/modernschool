@@ -2,56 +2,69 @@
 <style src="./LoginPage.css" scoped></style>
 
 <template>
-  <div class="login-page" v-if="!isRegisterVisible">
-    <p class="login-page__head_org">Тестовая организация</p>
-    <p class="login-page__header">Вход</p>
-    <custom-input
-        placeholder="Логин"
-        v-model="log"
-    >
-    </custom-input>
-    <custom-input
-        placeholder="Пароль"
-        v-model="pass"
-        type="password"
-    >
-    </custom-input>
-    <div class="login-page__buttons">
-      <custom-button class="login-page__button" @click="Login">
-        Войти
-      </custom-button>
-      <custom-button @click="Register"
-      >
-        Регистрация
-      </custom-button>
+  <div class="container">
+    <div class="login-page">
+      <div class="login-page__form" v-if="!isRegisterVisible">
+        <p class="login-page__header">Вход</p>
+        <custom-input
+            placeholder="Логин"
+            v-model="log"
+        ><template #icon>
+          <svg width="16" height="18" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.2975 14.458H8.12493C3.90021 14.458 0.47522 17.9974 0.47522 22.3633C0.47522 23.157 1.09806 23.8007 1.86608 23.8007H18.5564C19.3244 23.8007 19.9472 23.157 19.9472 22.3633C19.9472 17.9974 16.5222 14.458 12.2975 14.458ZM2.60453 21.6447C2.9479 18.8104 5.29106 16.614 8.12493 16.614H12.2975C15.1296 16.614 17.4741 18.8127 17.8175 21.6447H2.60453ZM10.2112 12.302C13.2837 12.302 15.7746 9.7278 15.7746 6.55263C15.7746 3.37746 13.2837 0.803284 10.2112 0.803284C7.13873 0.803284 4.64779 3.37746 4.64779 6.55263C4.64779 9.72825 7.13829 12.302 10.2112 12.302ZM10.2112 2.95929C12.1284 2.95929 13.6884 4.57135 13.6884 6.55263C13.6884 8.53391 12.1284 10.146 10.2112 10.146C8.29401 10.146 6.73408 8.53346 6.73408 6.55263C6.73408 4.57135 8.29444 2.95929 10.2112 2.95929Z" fill="#000000"/>
+          </svg>
+        </template>
+        </custom-input>
+        <custom-input
+            placeholder="Пароль"
+            v-model="pass"
+            type="password"
+        ><template #icon><svg width="17" height="20" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.448 0.209845C11.9507 0.506405 10.7963 1.19838 9.55044 2.54525C8.79607 3.36079 8.40746 3.89213 8.15601 4.47289C7.61881 5.67148 7.33307 7.03072 7.33307 8.41466V9.6009L3.90414 13.3079L0.47522 17.0272V20.0052C0.47522 22.9832 0.47522 22.9955 0.749534 23.3415L1.02385 23.6875H3.84699H6.67014L6.94445 23.3415C7.18448 23.0326 7.21877 22.8843 7.21877 21.8958V20.8084L8.30459 20.759C9.7676 20.7095 9.8819 20.586 9.96191 19.0167L10.0191 17.8799L11.0706 17.8181L12.1336 17.7563L12.8193 17.0149L13.5166 16.2735L14.6824 16.2611C16.9112 16.2364 18.6371 15.4827 20.0658 13.9257C21.003 12.9125 21.5059 12.0352 21.9403 10.7501C22.2032 9.95924 22.2374 9.65033 22.2374 8.24167C22.2489 6.42524 22.1003 5.70856 21.4259 4.31225C20.9573 3.36079 19.8029 2.02627 18.8771 1.37137C17.2998 0.271627 15.3225 -0.148499 13.448 0.209845ZM16.294 2.4464C17.8141 2.86652 19.0828 4.00334 19.7572 5.54792C20.5344 7.29021 20.5344 9.06956 19.7572 10.8242C18.6714 13.2955 16.294 14.5065 13.4823 13.9999L12.9451 13.901L12.1793 14.7413L11.4021 15.5939L9.68759 15.6186L7.9617 15.6557L7.92741 17.1137L7.89312 18.5595H6.53298H5.16141V20.0423V21.5251H3.78984H2.41828V19.6963V17.8675L5.97293 14.0493L9.52758 10.2311L9.40185 9.15606C8.94466 5.33785 11.2992 2.31047 14.751 2.26105C15.2082 2.24869 15.9054 2.33519 16.294 2.4464Z" fill="#0B0B0B"/>
+          <path d="M15.5624 5.41198C14.5566 5.86918 14.7052 7.72268 15.7682 8.06866C16.7283 8.37758 17.5055 7.74739 17.5055 6.67236C17.5055 6.16574 17.4484 6.0051 17.174 5.69619C16.9912 5.49848 16.774 5.32549 16.6826 5.32549C16.1111 5.2637 15.8596 5.28842 15.5624 5.41198Z" fill="#000000"/>
+        </svg>
+        </template>
+        </custom-input>
+        <custom-button @click="Login">
+          Войти
+        </custom-button>
+
+        <custom-button сlass="mt-6" @click="Login" >
+          Войти как родитель
+        </custom-button>
+        <p>{{store.data}}</p>
+      </div>
+      <div class="login-page-form" v-else>
+        <p class="login-page__header">Регистрация</p>
+        <custom-input
+            :label="Тест"
+            placeholder="Логин"
+            v-model="log"
+        ><template #icon>
+          <svg aria-hidden="true" class=" h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </template>
+        </custom-input>
+        <custom-input
+            :icon="true"
+            placeholder="Пароль"
+            v-model="pass"
+            type="password"
+        ></custom-input>
+        <custom-input
+
+            placeholder="Введите пароль еще раз"
+            v-model="repeatPass"
+            type="password"
+        ></custom-input>
+        <p v-if="isValid">Пароли не совпадают. Введите пароль повторно</p>
+        <div v-else></div>
+        <custom-button
+            @click="onRegister"
+        >
+          Регистрация
+        </custom-button>
+      </div>
     </div>
-    <p>{{store.data}}</p>
-  </div>
-  <div class="login-page" v-else>
-    <p class="login-page__head_org">Тестовая организация</p>
-    <p class="login-page__header">Регистрация</p>
-    <custom-input
-        placeholder="Логин"
-        v-model="log"
-    >
-    </custom-input>
-    <custom-input
-        placeholder="Пароль"
-        v-model="pass"
-        type="password"
-    ></custom-input>
-    <custom-input
-        placeholder="Введите пароль еще раз"
-        v-model="repeatPass"
-        type="password"
-    ></custom-input>
-    <p v-if="isValid">Пароли не совпадают. Введите пароль повторно</p>
-    <div v-else></div>
-    <custom-button 
-        @click="onRegister"
-    >
-      Регистрация
-    </custom-button>
   </div>
 </template>
 

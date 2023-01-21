@@ -2,7 +2,9 @@
 <style src="./CustomButton.css" scoped></style>
 
 <template>
-  <button class="custom-button">
-    <slot></slot>
-  </button>
+  <div class="custom-button">
+    <button class="custom-button__button">
+      <slot></slot>
+    </button>
+  </div>
 </template>
