@@ -25,15 +25,13 @@
         </svg>
         </template>
         </custom-input>
-        <div class="login-page__buttons">
-          <custom-button class="login-page__button" @click="Login">
-            Войти
-          </custom-button>
-          <custom-button @click="Register"
-          >
-            Регистрация
-          </custom-button>
-        </div>
+        <custom-button @click="Login">
+          Войти
+        </custom-button>
+
+        <custom-button сlass="mt-6" @click="Login" >
+          Войти как родитель
+        </custom-button>
         <p>{{store.data}}</p>
       </div>
       <div class="login-page-form" v-else>
