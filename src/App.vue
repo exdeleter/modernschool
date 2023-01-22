@@ -23,8 +23,6 @@ export default {
     flex-grow: 3;
     position: relative;
     display: block;
-    min-width: 960px;
-    min-height: 700px;
   }
 </style>
 
