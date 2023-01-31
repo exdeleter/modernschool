@@ -8,9 +8,10 @@ export const useProblemStore = defineStore("problem",() => {
     
     async function Get() {
         try {
-            debugger
-            const response = await API.get('/Problem/sort',
-                params.value)
+            const response = await API.get('/Schedule/GetCurrentSchedule',
+                {
+                    params: params.value
+                })
 
             data.value = response.data;
             //TODO temp solution, may be need to do with other way 

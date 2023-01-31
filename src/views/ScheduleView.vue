@@ -1,12 +1,12 @@
 <template>
   <div class="schedule-view">
     <ul class="schedule-view__buttons">
-        <li
-            v-for="tab in tabs"
-            :key="tab.id"
-            :class="['tab-button',
-                { active: currentTabComponent.name === tab.name }]"
-            @click="change(tab)">{{ tab.name }}
+      <li
+          v-for="tab in tabs"
+          :key="tab.id"
+          :class="['tab-button',
+            { active: currentTabComponent.name === tab.name }]"
+          @click="change(tab)">{{ tab.name }}
         </li>
       </ul>
     <div class="schedule-view__tabs">
@@ -86,8 +86,9 @@ export default {
 .schedule-view__buttons {
   @apply grid grid-cols-3 border-b-2 mr-6 ml-6 mt-2 mb-3
 }
+
 .tab-button {
-  @apply font-medium text-gray-600;
+  @apply  p-2 ml-4 mr-4 font-medium text-gray-600 justify-around flex;
 }
 
 .tab-button:hover {

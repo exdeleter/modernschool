@@ -7,12 +7,6 @@
       <custom-table
       :data="store.data"
       :columns="columns">
-        <template #subject="{ item, value, updateItem }">
-          {{ value.name }}
-        </template>
-        <template #description="{ item, value, updateItem }">
-          {{ value }}
-        </template>
       </custom-table>
     </div>
     <p></p>
@@ -21,13 +15,13 @@
 </template>
 
 <script>
-import {onMounted, reactive, ref, toRefs} from "vue";
+import {onMounted, reactive, ref, toRefs, watch} from "vue";
 import { CustomTable } from "@components";
 import { useProblemStore } from "@store";
 
 export default {
   name: "day-view",
-  components: {CustomTable},
+  components: { CustomTable },
   props: {
     day: {
       default: null,
@@ -37,21 +31,9 @@ export default {
   setup(props) {
     const { day } = toRefs(props);
 
-    const data = [
-      {
-        number: "1",
-        name: "Физкультура",
-        homework: "Сдать норматив"
-      }
-    ];
-
     const columns = [
       {
-        name: 'number',
-        label: "№",
-      },
-      {
-        name: 'subject',
+        name: 'name',
         label: 'Наименование',
       },
       {
@@ -59,25 +41,35 @@ export default {
         label: 'Домашняя работа',
       },
       {
-        name: 'mark',
+        name: 'score',
         label: 'Оценка',
       },
     ]
 
+    function getDate(date) {
+      const year = date.getFullYear();
+      const month = date.getMonth()+1;
+      const day = date.getDate();
+
+      return month + '.' + day + '.' + year;
+    }
+
+    watch(day,
+        () => {
+          store.params = {
+            studentID: 2,
+            date: getDate(day.value),
+          }
+
+          store.Get();
+        },
+        { deep: true }
+    )
+
     const store = useProblemStore();
 
-    onMounted(() => {
-      debugger;
-      store.params = {
-        studentID: "1",
-        date: '2023-01-23 19:42:41.677 +0300',
-      }
-
-      store.Get();
-    })
     return {
       day,
-      data,
       columns,
       store
     }
