@@ -1,17 +1,15 @@
 <template>
   <div class="container">
     <div class="hub-page">
-      <div class="hub-page__side-bar">
-        <custom-button
+      <ul class="hub-page__side-bar">
+        <li
             v-for="tab in tabs"
             :key="tab.id"
-            :class="['custom-button',
+            :class="['hub-page__side-bar__tab',
                 { active: currentTabComponent.name === tab.name }]"
             @click="change(tab)"
-        >
-          {{ tab.name }}
-        </custom-button>
-      </div>
+        >{{ tab.name }}</li>
+      </ul>
       <div class="hub-page__main">
         <div class="hub-page__tabs">
           <component :is="currentTabComponent.component" class="tab">
@@ -76,11 +74,20 @@ export default {
 }
 
 .hub-page__side-bar {
-  background-color: #808080;
-  height:100%;
+  @apply h-full border-2 border-gray-600 font-medium ;
   width:15%;
 }
 
+.hub-page__side-bar__tab {
+  @apply p-2 flex justify-around border-b-2 border-gray-300 text-gray-700;
+}
+
+.hub-page__side-bar__tab:hover {
+  background: #e0e0e0;
+}
+.hub-page__side-bar__tab.active {
+  background: #e0e0e0;
+}
 .hub-page__main {
   background-color: #f3f3f3;height:100%;width:85%;
   @apply p-6;
@@ -104,12 +111,7 @@ export default {
   margin-bottom: -1px;
   margin-right: -1px;
 }
-.custom-button:hover {
-  background: #e0e0e0;
-}
-.custom-button.active {
-  background: #e0e0e0;
-}
+
 .demo-tab {
   border: 1px solid #ccc;
   padding: 10px;

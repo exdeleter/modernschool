@@ -2,8 +2,8 @@
   <div class="schedule-view">
     <ul class="schedule-view__buttons">
       <li
-          v-for="tab in tabs"
-          :key="tab.id"
+          v-for="(tab, index) in tabs"
+          :key="index"
           :class="['tab-button',
             { active: currentTabComponent.name === tab.name }]"
           @click="change(tab)">{{ tab.name }}
