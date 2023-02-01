@@ -15,9 +15,10 @@
 </template>
 
 <script>
-import {onMounted, reactive, ref, toRefs, watch} from "vue";
+import { toRefs, watch} from "vue";
 import { CustomTable } from "@components";
 import { useProblemStore } from "@store";
+import { getDate } from "@/helpers";
 
 export default {
   name: "day-view",
@@ -30,6 +31,8 @@ export default {
   },
   setup(props) {
     const { day } = toRefs(props);
+
+    const store = useProblemStore();
 
     const columns = [
       {
@@ -46,13 +49,7 @@ export default {
       },
     ]
 
-    function getDate(date) {
-      const year = date.getFullYear();
-      const month = date.getMonth()+1;
-      const day = date.getDate();
 
-      return month + '.' + day + '.' + year;
-    }
 
     watch(day,
         () => {
@@ -65,8 +62,6 @@ export default {
         },
         { deep: true }
     )
-
-    const store = useProblemStore();
 
     return {
       day,

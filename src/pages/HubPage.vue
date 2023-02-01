@@ -22,8 +22,8 @@
 
 <script>
 import { CustomButton } from "@components";
-import {computed, ref} from "vue";
-import {LoginPage, NotFoundPage} from "@/pages/index";
+import { computed, ref} from "vue";
+import { StudentsPage } from "@/pages/index";
 import { ScheduleView } from "@/views";
 export default {
   name: "hub-page",
@@ -35,8 +35,8 @@ export default {
         component: ScheduleView
       },
       {
-        name: "Мои учители",
-        component: NotFoundPage
+        name: "Ученики",
+        component: StudentsPage
       }
     ]
 
@@ -99,21 +99,5 @@ export default {
   border-radius: 2px;
   user-select: none;
   overflow-x: auto;
-}
-
-.tab-button {
-  @apply p-2;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border: 1px solid #d32121;
-  cursor: pointer;
-  background: #f0f0f0;
-  margin-bottom: -1px;
-  margin-right: -1px;
-}
-
-.demo-tab {
-  border: 1px solid #ccc;
-  padding: 10px;
 }
 </style>

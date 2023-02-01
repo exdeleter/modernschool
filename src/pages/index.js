@@ -8,3 +8,4 @@ export { default as SubjectsPage }  from "./SubjectsPage.vue";
 export { default as TeacherFormPage }  from "./TeacherFormPage.vue";
 export { default as NotFoundPage }  from "./NotFoundPage";
 export { default as HubPage }  from "./HubPage";
+export { default as StudentsPage }  from "./StudentsPage.vue";
