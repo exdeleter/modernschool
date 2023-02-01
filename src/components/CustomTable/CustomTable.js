@@ -19,7 +19,6 @@ export default {
         const { data, columns } = toRefs(props);
         //TODO подумать над тем, как передавать изменение значение в ячейке таблицы
         function updateItem() {
-            debugger;
             emit('update:modelValue', event.target.value)
         }
         

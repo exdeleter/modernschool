@@ -6,7 +6,9 @@ import {
     ClassesPage,
     LoginPage,
     SubjectsPage,
-    TeacherFormPage, NotFoundPage,
+    TeacherFormPage,
+    NotFoundPage,
+    HubPage,
 } from "@pages";
 
 
@@ -45,9 +47,12 @@ const routes = [
         props: true,
     },
     {
+        path: '/hub-page',
+        component: HubPage
+    },
+    {
         path: '/:pathMatch(.*)*',
         component: NotFoundPage,
-
     },
 ]
 
