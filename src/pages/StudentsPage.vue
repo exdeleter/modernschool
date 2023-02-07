@@ -71,7 +71,7 @@ export default {
 
 
 
-<style>
+<style scoped>
 
 .title {
   text-align: center;
