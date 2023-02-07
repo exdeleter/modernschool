@@ -23,7 +23,7 @@ export const useClassFormStore = defineStore("class-form",() => {
         try {
             let response = null;
 
-            if(!!data?.id)
+            if(!!data.value?.id)
             {
                 response = await API.put('/Class',  data.value);
             } else {
