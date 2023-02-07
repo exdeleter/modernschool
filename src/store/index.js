@@ -4,3 +4,4 @@ export { useSubjectStore } from "./SubjectStore";
 export { useTeacherStore } from "./TeacherStore.js";
 export { useProblemStore } from "./ProblemStore";
 export { useClassStore } from "./ClassStore";
+export { useClassFormStore } from "./ClassFormStore.js";

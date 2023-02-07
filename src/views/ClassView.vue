@@ -1,11 +1,17 @@
 <template>
   <div class="class-view">
     <div class="class-view__top-bar">
-      <custom-button>
+      <custom-button @click="openForm(0)">
         Добавить
+      </custom-button>
+      <custom-button @click="store.Get">
+        Обновить
       </custom-button>
     </div>
     <modal-window v-model:show="isVisible">
+      <template #header>
+        Редактирование класса
+      </template>
       <class-form
           :id="selectedId"
       >
@@ -75,7 +81,6 @@ export default {
     })
 
     function openForm(id) {
-      debugger;
       selectedId.value = id;
       isVisible.value = !isVisible.value
     }
@@ -97,6 +102,7 @@ export default {
 }
 
 .class-view__top-bar {
+  @apply grid grid-cols-2
 }
 
 

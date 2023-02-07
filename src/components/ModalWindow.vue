@@ -1,10 +1,11 @@
 <template>
-  <Teleport to="#modal">
+    <Teleport to="#modal">
     <div class="modal-window"
          v-if="show"
          @click.stop="hideWindow"
     >
       <div @click.stop class="modal-window__content">
+        <div class="modal-window__header"><slot name="header">Заголовок</slot></div>
         <slot></slot>
       </div>
     </div>
@@ -41,6 +42,7 @@ export default {
   background: rgba(0,0,0,0.5);
   position: fixed;
   display: flex;
+
 }
 
 .modal-window__content {
@@ -50,5 +52,10 @@ export default {
   min-height: 50px;
   min-width: 300px;
   padding: 20px;
+  @apply grid grid-rows-[30px_auto];
+}
+
+.modal-window__header {
+  @apply font-bold border-b-4 justify-center;
 }
 </style>
