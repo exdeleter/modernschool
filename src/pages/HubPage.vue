@@ -24,7 +24,11 @@
 import { CustomButton } from "@components";
 import { computed, ref} from "vue";
 import { StudentsPage } from "@/pages/index";
-import {ClassView, ScheduleView} from "@/views";
+import {
+  ClassView,
+  ScheduleView,
+  TeacherView
+} from "@/views";
 export default {
   name: "hub-page",
   components: {CustomButton},
@@ -41,6 +45,10 @@ export default {
       {
         name: "Классы",
         component: ClassView
+      },
+      {
+        name: "Учителя",
+        component: TeacherView
       }
     ]
 
