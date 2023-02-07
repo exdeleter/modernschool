@@ -6,7 +6,7 @@
 }
 
 .custom-input__wrapper {
-    @apply flex
+    @apply grid grid-rows-[20px_auto] flex
 }
 
 .custom-input__icon {
